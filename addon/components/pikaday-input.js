@@ -16,7 +16,9 @@ export default Ember.Component.extend({
     'size',
     'required',
     'title',
-    'hidden'
+    'hidden',
+    'defaultDate',
+    'setDefaultDate'
   ],
 
   type: 'text',
@@ -54,7 +56,9 @@ export default Ember.Component.extend({
       yearRange: this.determineYearRange(),
       minDate: this.get('minDate') || null,
       maxDate: this.get('maxDate') || null,
-      theme: this.get('theme') || null
+      theme: this.get('theme') || null,
+      defaultDate: this.get('defaultDate') || null,
+      setDefaultDate: this.get('setDefaultDate') || false
     };
   },
 
