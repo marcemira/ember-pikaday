@@ -40,7 +40,7 @@ export default Ember.Component.extend({
       Ember.merge(options, this.get('options') || {});
       return options;
     }
-  }),
+  }).volatile(),
 
   _defaultOptions() {
     const firstDay = this.get('firstDay');
